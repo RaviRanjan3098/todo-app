@@ -94,12 +94,13 @@ function TodoApp() {
           <span className="todo-text ">{todo.text}</span>
           </li>
           <div className="button-group col-2">
-            <button className="btn btn-info mr-2" onClick={() => handleEditTodo(todo)}>
+            <button className="btn btn-info" onClick={() => handleEditTodo(todo)}>
               Edit
             </button>
-            <button className="btn btn-success mr-2" onClick={() => handleViewTodo(todo)}>View</button>
+            <button className="btn btn-success" onClick={() => handleViewTodo(todo)}>View</button>
             <button className="btn btn-danger" onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
           </div>
+
        
         </div>
         
