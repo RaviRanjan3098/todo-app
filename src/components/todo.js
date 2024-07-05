@@ -90,14 +90,14 @@ function TodoApp() {
       <h5 className="mx-3">Assignment</h5>
         {task.map(todo => (
           <div  key={todo.id} className='d-flex mt-1 gap-2'>
-          <li className="list-group-item col-10 d-flex justify-content-between align-items-center">
-          <span className="todo-text">{todo.text}</span>
+          <li className="list-group-item col-10 d-flex justify-content-between align-items-center task-text">
+          <span className="todo-text ">{todo.text}</span>
           </li>
           <div className="button-group col-2">
             <button className="btn btn-info mr-2" onClick={() => handleEditTodo(todo)}>
               Edit
             </button>
-            <button className="btn btn-success mr-2 mx-2" onClick={() => handleViewTodo(todo)}>View</button>
+            <button className="btn btn-success mr-2" onClick={() => handleViewTodo(todo)}>View</button>
             <button className="btn btn-danger" onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
           </div>
        

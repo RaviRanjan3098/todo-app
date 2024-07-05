@@ -44,7 +44,7 @@ html, body {
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
-    max-height: 500px; /* Adjust this value as needed */
+    max-height: 800px; /* Adjust this value as needed */
     overflow-y: auto; /* Adds a scrollbar if content overflows */
   }
   
