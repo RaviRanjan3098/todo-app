@@ -69,7 +69,7 @@ function TodoApp() {
 
   return (
     <> 
-    <div className="container-fluid p-5 d-flex flex-column align-items-center bg-info-subtle h-full">
+    <div className="container-fluid p-5 d-flex flex-column align-items-center bg-info-subtle">
       <h2>Add Task</h2>  
       <div className="mb-3 w-100">
         <input
