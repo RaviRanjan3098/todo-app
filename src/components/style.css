@@ -40,3 +40,16 @@ html, body {
     height: 100%;
     margin: 0;
 }
+.task-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-height: 500px; /* Adjust this value as needed */
+    overflow-y: auto; /* Adds a scrollbar if content overflows */
+  }
+  
+  .modal-body {
+    max-height: 70vh; /* Adjust this value as needed */
+    overflow-y: auto; /* Adds a scrollbar if content overflows */
+  }
+  

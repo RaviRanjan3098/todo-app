@@ -89,35 +89,40 @@ function TodoApp() {
       <ul className="list-group w-100">
       <h5 className="mx-3">Assignment</h5>
         {task.map(todo => (
-          <li className="list-group-item  d-flex justify-content-between align-items-center" key={todo.id}>
-            {todo.text}
-            <div>
-              <button className="btn btn-info mr-2" onClick={() => handleEditTodo(todo)}>
-                Edit
-              </button>
-              <button className="btn btn-success mr-2 mx-2" onClick={() => handleViewTodo(todo)}>View</button>
-              <button className="btn btn-danger" onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
-            </div>
+          <div  key={todo.id} className='d-flex mt-1 gap-2'>
+          <li className="list-group-item col-10 d-flex justify-content-between align-items-center">
+          <span className="todo-text">{todo.text}</span>
           </li>
+          <div className="button-group col-2">
+            <button className="btn btn-info mr-2" onClick={() => handleEditTodo(todo)}>
+              Edit
+            </button>
+            <button className="btn btn-success mr-2 mx-2" onClick={() => handleViewTodo(todo)}>View</button>
+            <button className="btn btn-danger" onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+          </div>
+       
+        </div>
+        
         ))}
       </ul>
 
       {isModalOpen && (
-        <div className="modal" style={{ display: 'block', backgroundColor: 'rgba(0,4,0,0.5)' }}>
-          <div className="modal-dialog">
-            <div className="modal-content m-0 p-0">
-              <div className="modal-header bg-primary">
-                <h5 className="modal-title text-white m-auto">Details About Task </h5>
-              </div>
-              <div className="modal-body">
-                <p>{currentTask?.text}</p>
-              </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" onClick={handleCloseModal}>Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
+       <div className="modal" style={{ display: 'block', backgroundColor: 'rgba(0,4,0,0.5)' }}>
+       <div className="modal-dialog">
+         <div className="modal-content m-0 p-0">
+           <div className="modal-header bg-primary">
+             <h5 className="modal-title text-white m-auto">Details About Task</h5>
+           </div>
+           <div className="modal-body">
+             <p className='col-12 task-text'>{currentTask?.text}</p>
+           </div>
+           <div className="modal-footer">
+             <button type="button" className="btn btn-secondary" onClick={handleCloseModal}>Close</button>
+           </div>
+         </div>
+       </div>
+     </div>
+     
       )}
     </div>
     </> 
