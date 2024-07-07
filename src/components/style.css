@@ -47,14 +47,6 @@ html, body {
     max-height: 800px;
     overflow-y: auto; 
   }
-  .task-text-body {
-    /* word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto; */
-    max-height: 100px;
-    /* overflow-x: scroll;  */
-    overflow-x: hidden;
-  }
   
   .modal-body {
     max-height: 70vh; 
@@ -65,6 +57,4 @@ html, body {
     flex-direction: column; 
     gap: 2px;
   }
-
-
   
